@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.a4409704.css",
-    "main.js": "/static/js/main.5e353395.js",
-    "index.html": "/index.html",
-    "main.a4409704.css.map": "/static/css/main.a4409704.css.map",
-    "main.5e353395.js.map": "/static/js/main.5e353395.js.map"
+    "main.css": "/nxtwave-react-assignment/static/css/main.a4409704.css",
+    "main.js": "/nxtwave-react-assignment/static/js/main.5e353395.js",
+    "index.html": "/nxtwave-react-assignment/index.html",
+    "main.a4409704.css.map": "/nxtwave-react-assignment/static/css/main.a4409704.css.map",
+    "main.5e353395.js.map": "/nxtwave-react-assignment/static/js/main.5e353395.js.map"
   },
   "entrypoints": [
     "static/css/main.a4409704.css",
