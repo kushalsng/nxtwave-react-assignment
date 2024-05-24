@@ -8,7 +8,6 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import HeaderLayout from './layout/HeaderLayout';
 
-
 function App() {
   return (
     <>
@@ -20,7 +19,7 @@ function App() {
         </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
-    <ToastContainer />
+    <ToastContainer position='top-right' />
     </>
   );
 }

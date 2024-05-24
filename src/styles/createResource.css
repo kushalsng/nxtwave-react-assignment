@@ -1,0 +1,254 @@
+/* CSS for ReusableItem component */
+.mt-9 {
+  margin-top: 2.25rem;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.tracking-normal {
+  letter-spacing: 0;
+}
+
+.leading-4 {
+  line-height: 1rem;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.mt-3 {
+  margin-top: 0.75rem;
+}
+
+.text-blue-600 {
+  color: #2563eb;
+}
+
+.text-indigo-950 {
+  color: #4338ca;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+.rounded-sm {
+  border-radius: 0.125rem;
+}
+
+.border {
+  border-width: 1px;
+}
+
+.border-solid {
+  border-style: solid;
+}
+
+.border-zinc-200 {
+  border-color: #e0e7ff;
+}
+
+.leading-[171%] {
+  line-height: 2.71;
+}
+
+.max-md\:pr-5 {
+  padding-right: 1.25rem;
+}
+
+.shrink-0 {
+  flex-shrink: 0;
+}
+
+.w-4 {
+  width: 1rem;
+}
+
+.aspect-square {
+  aspect-ratio: 1 / 1;
+}
+
+.ml-2 {
+  margin-left: 0.5rem;
+}
+
+/* CSS for IconItem component */
+.flex {
+  display: flex;
+}
+
+.gap-1 {
+  gap: 0.25rem;
+}
+
+.self-start {
+  align-self: flex-start;
+}
+
+.whitespace-nowrap {
+  white-space: nowrap;
+}
+
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+/* CSS for Create1 component */
+.bg-zinc-50 {
+  background-color: #f6f8fe;
+}
+
+.pt-4 {
+  padding-top: 1rem;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.max-md\:max-w-full {
+  max-width: 100%;
+}
+
+.max-w-[1352px] {
+  max-width: 84.5rem;
+}
+
+.max-md\:flex-wrap {
+  flex-wrap: wrap;
+}
+
+.min-h-[1px] {
+  min-height: 0.0625rem;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.w-[44%] {
+  width: 44%;
+}
+
+.max-md\:ml-0 {
+  margin-left: 0;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.mt-32 {
+  margin-top: 8rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
+.ml-5 {
+  margin-left: 1.25rem;
+}
+
+.aspect-[0.68] {
+  aspect-ratio: 100 / 68;
+}
+
+/* Specific to the button */
+.self-center {
+  align-self: center;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.leading-6 {
+  line-height: 1.5rem;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.whitespace-nowrap {
+  white-space: nowrap;
+}
+
+.bg-blue-600 {
+  background-color: #2563eb;
+}
+
+.rounded {
+  border-radius: 0.375rem;
+}
+
+.w-half {
+  width: 50%;
+}
+
+textarea {
+  resize: vertical;
+  row: 6
+}
+
+.text-red-600 {
+  color: red;
+  font-weight: 600;
+  margin-top: 0;
+  font-size: 0.8rem;
+}
+.button {
+  cursor: pointer;
+}

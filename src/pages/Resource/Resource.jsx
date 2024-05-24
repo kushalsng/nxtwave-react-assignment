@@ -2,12 +2,12 @@ import React, { useEffect, useMemo, useState } from 'react'
 import SearchBox from '../../components/SearchBox';
 import ResourceCard from '../../components/ResourceCard';
 import { toast } from 'react-toastify';
-import axios from 'axios';
 import Pagination from '../../components/Pagination';
 import { PAGINATION_LIMIT } from '../../constants/pagination';
 import Error from '../../components/Error';
 import Loader from '../../components/Loader';
 import NoData from '../../components/NoData';
+import { getResources } from '../../helper/apiCalls';
 
 const Resource = () => {
   const [skip, setSkip] = useState(0);
@@ -40,20 +40,14 @@ const Resource = () => {
     try {
       setResourceLoading(true);
       setResourceFetchFailed(false);
-      const responseData = await axios.get('https://media-content.ccbp.in/website/react-assignment/resources.json', {
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      })
+      const responseData = await getResources();
       setResourceLoading(false);
       setResourceList(() => responseData.data);
     } catch (err) {
       console.error(err);
       setResourceLoading(false);
       setResourceFetchFailed(true);
-      toast.error(err.response.message, {
-        position: 'top-right'
-      })
+      toast.error(err.response.message)
     }
   }
   useEffect(() => {

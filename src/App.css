@@ -75,7 +75,9 @@
   display: flex;
   gap: 20px;
 }
-
+.cursor-pointer {
+  cursor: pointer;
+}
 .button {
   padding: 8px 20px;
   background-color: #22c55e;
