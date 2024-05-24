@@ -18,7 +18,7 @@ const Resource = () => {
   const [activeTab, setActiveTab] = useState('1');
 
   const searchedResourceList = useMemo(() => {
-    return resourceList.filter((resource) => !search.length || resource.title.toLowerCase().includes(search.toLowerCase()))
+    return resourceList.filter((resource) => !search.length || resource.title.toLowerCase().includes(search.trim().toLowerCase()))
   }, [resourceList, search])
 
   const filteredResourceList = useMemo(() => {
