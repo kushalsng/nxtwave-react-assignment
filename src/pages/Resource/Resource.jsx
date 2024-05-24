@@ -56,6 +56,7 @@ const Resource = () => {
 
   useEffect(() => {
     setSearch('');
+    setSkip(0);
   }, [activeTab])
   return (
     <React.Fragment>
