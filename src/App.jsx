@@ -8,7 +8,6 @@ import 'react-toastify/dist/ReactToastify.css';
 import HeaderLayout from './layout/HeaderLayout';
 
 function App() {
-
   return (
     <>
       <Routes>

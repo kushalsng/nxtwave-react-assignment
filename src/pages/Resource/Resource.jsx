@@ -9,18 +9,21 @@ import Loader from '../../components/Loaders/Loader';
 import NoData from '../../components/Loaders/NoData';
 import { getResources } from '../../helper/apiCalls';
 import '../../styles/resources.css'
+import { useDispatch, useSelector } from 'react-redux'
+import { setResourceFetchFailed, setResourceList, setResourceLoading } from '../../redux/resource/actions';
 
 const Resource = () => {
   const [skip, setSkip] = useState(0);
-  const [resourceList, setResourceList] = useState([]);
-  const [resourceFetchFailed, setResourceFetchFailed] = useState(false);
-  const [resourceLoading, setResourceLoading] = useState(false);
-  const [resourceEmpty, setResourceEmpty] = useState(false);
   const [search, setSearch] = useState('');
   const [activeTab, setActiveTab] = useState('1');
-
+  const dispatch = useDispatch();
+  const { resourceList, resourceEmpty, resourceLoading, resourceFetchFailed } = useSelector((state) => state.resource);
   const searchedResourceList = useMemo(() => {
-    return resourceList.filter((resource) => !search.length || resource.title.toLowerCase().includes(search.trim().toLowerCase()))
+    if(resourceList && resourceList.length) {
+      return resourceList.filter((resource) => !search.length || resource.title.toLowerCase().includes(search.trim().toLowerCase()))
+    } else {
+      return [];
+    }
   }, [resourceList, search])
 
   const filteredResourceList = useMemo(() => {
@@ -40,20 +43,12 @@ const Resource = () => {
 
   const fetchResources = async () => {
     try {
-      setResourceLoading(true);
-      setResourceFetchFailed(false);
+      dispatch(setResourceLoading());
       const responseData = await getResources();
-      setResourceLoading(false);
-      if(!responseData.data.length) {
-        setResourceEmpty(true);
-      } else {
-        setResourceList(() => responseData.data);
-      }
+      dispatch(setResourceList(responseData.data));
     } catch (err) {
       console.error(err);
-      setResourceLoading(false);
-      setResourceFetchFailed(true);
-      setResourceEmpty(false);
+      dispatch(setResourceFetchFailed());
       toast.error(err.response.message)
     }
   }
