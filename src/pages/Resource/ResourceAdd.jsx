@@ -1,15 +1,16 @@
 import React from 'react'
 import {useForm } from 'react-hook-form';
-import { ReactComponent as LeftArrowIcon } from '../../assets/icons/leftArrow.svg'
 import { zodResolver } from '@hookform/resolvers/zod';
+import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom'; 
+
+import { ReactComponent as LeftArrowIcon } from '../../assets/icons/leftArrow.svg'
 import { resourceSchema } from '../../utils/formSchema';
 import FormComponent from '../../components/FormComponent';
 import '../../styles/createResource.css'
 import { addResourceForm } from '../../constants/form';
 import { addResource } from '../../helper/apiCalls';
-import { toast } from 'react-toastify';
-import { useNavigate } from 'react-router-dom';
-
+import addResourceImage from '../../assets/images/side.png'
 const ResourceAdd = () => {
   const navigate = useNavigate();
   const form = useForm({
@@ -37,7 +38,7 @@ const ResourceAdd = () => {
         </div>
       </div>
       <section className="image-container">
-        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/8b733e9abca5e51e165e3a9034d7b2528a192b3e3dd89d44570fea89ef15ed74?apiKey=9a2fec4ca6994ce297432330db493ccf&" alt="Main visual content" className="main-image" />
+        <img loading="lazy" src={addResourceImage} alt="Main visual content" className="main-image" />
       </section>
     </div>
   )

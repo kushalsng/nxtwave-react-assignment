@@ -2,7 +2,7 @@ import React from 'react'
 import Lottie from 'react-lottie'
 import noDataAnimationJson from '../../assets/animations/no-data.json'
 
-const NoData = () => {
+const NoData = ({ message }) => {
   return (
     <React.Fragment>
       <div className="flex-col">
@@ -19,7 +19,7 @@ const NoData = () => {
             width: 200
           }}
         />
-        <h1>No Resource Found!</h1>
+        <h1>{message || "No Resource Found!"}</h1>
       </div>
     </React.Fragment>
   )

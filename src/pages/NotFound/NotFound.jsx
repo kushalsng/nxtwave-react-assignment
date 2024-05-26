@@ -1,8 +1,9 @@
 import React from 'react'
+import NoData from '../../components/Loaders/NoData'
 
 const NotFound = () => {
   return (
-    <div>NotFound</div>
+    <NoData message="Page Not Found!" />
   )
 }
 
