@@ -8,6 +8,7 @@ import Error from '../../components/Error';
 import Loader from '../../components/Loader';
 import NoData from '../../components/NoData';
 import { getResources } from '../../helper/apiCalls';
+import '../../styles/resources.css'
 
 const Resource = () => {
   const [skip, setSkip] = useState(0);
