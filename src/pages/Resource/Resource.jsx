@@ -4,9 +4,9 @@ import ResourceCard from '../../components/ResourceCard';
 import { toast } from 'react-toastify';
 import Pagination from '../../components/Pagination';
 import { PAGINATION_LIMIT } from '../../constants/pagination';
-import Error from '../../components/Error';
-import Loader from '../../components/Loader';
-import NoData from '../../components/NoData';
+import Error from '../../components/Loaders/Error';
+import Loader from '../../components/Loaders/Loader';
+import NoData from '../../components/Loaders/NoData';
 import { getResources } from '../../helper/apiCalls';
 import '../../styles/resources.css'
 
@@ -15,6 +15,7 @@ const Resource = () => {
   const [resourceList, setResourceList] = useState([]);
   const [resourceFetchFailed, setResourceFetchFailed] = useState(false);
   const [resourceLoading, setResourceLoading] = useState(false);
+  const [resourceEmpty, setResourceEmpty] = useState(false);
   const [search, setSearch] = useState('');
   const [activeTab, setActiveTab] = useState('1');
 
@@ -43,11 +44,16 @@ const Resource = () => {
       setResourceFetchFailed(false);
       const responseData = await getResources();
       setResourceLoading(false);
-      setResourceList(() => responseData.data);
+      if(!responseData.data.length) {
+        setResourceEmpty(true);
+      } else {
+        setResourceList(() => responseData.data);
+      }
     } catch (err) {
       console.error(err);
       setResourceLoading(false);
       setResourceFetchFailed(true);
+      setResourceEmpty(false);
       toast.error(err.response.message)
     }
   }
@@ -81,23 +87,25 @@ const Resource = () => {
           Users
         </div>
       </nav>
-      <SearchBox search={search} setSearch={setSearch} />
-      <section className="section-container">
-        <div className="item-container">
-          {resourceLoading ? (
-            <Loader />
-          ) : resourceFetchFailed ? (
-            <Error />
-          ) : (!resourceLoading && !resourceFetchFailed && !slicedResourceList.length) ? (
-            <NoData />
-          ) : (
-            slicedResourceList.map((resource) => (
-              <ResourceCard resource={resource} />
-            ))
-          )}
-        </div>
-      </section>
-      <Pagination skip={skip} setSkip={setSkip} totalCount={filteredResourceList.length} />
+        {resourceLoading ? (
+          <Loader />
+        ) : resourceFetchFailed ? (
+          <Error />
+        ) : (resourceEmpty) ? (
+          <NoData />
+        ) : (
+          <>
+            <SearchBox search={search} setSearch={setSearch} />
+            <section className="section-container">
+              <div className="item-container">
+                  {slicedResourceList.map((resource) => (
+                    <ResourceCard resource={resource} />
+                  ))}
+              </div>
+            </section>
+            <Pagination skip={skip} setSkip={setSkip} totalCount={filteredResourceList.length} />
+          </>
+        )}
     </React.Fragment>
   )
 }

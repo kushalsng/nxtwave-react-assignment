@@ -1,25 +1,25 @@
 import React from 'react'
 import Lottie from 'react-lottie'
-import noDataAnimationJson from '../assets/animations/no-data.json'
+import loadingAnimationJson from '../../assets/animations/loading.json'
 
-const NoData = () => {
+const Loader = () => {
   return (
     <React.Fragment>
-      <div style={{ width: '100px', height: '100px' }} />
       <Lottie
         options={{
           loop: true,
           autoplay: true,
-          animationData: noDataAnimationJson,
+          animationData: loadingAnimationJson,
           rendererSettings: {
             preserveAspectRatio: 'xMidYMid slice',
           },
         }}
-
+        style={{
+          width: 200
+        }}
       />
-      <h1>No Resource Found!</h1>
     </React.Fragment>
   )
 }
 
-export default NoData
+export default Loader
