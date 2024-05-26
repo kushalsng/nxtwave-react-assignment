@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/nxtwave-react-assignment/static/css/main.f452d0bc.css",
-    "main.js": "/nxtwave-react-assignment/static/js/main.64f32d2d.js",
+    "main.css": "/nxtwave-react-assignment/static/css/main.ce97dffa.css",
+    "main.js": "/nxtwave-react-assignment/static/js/main.cf3dc32f.js",
     "static/media/redux.cjs": "/nxtwave-react-assignment/static/media/redux.7edfc461ab353f1712ab.cjs",
     "index.html": "/nxtwave-react-assignment/index.html",
     "static/media/search.svg": "/nxtwave-react-assignment/static/media/search.449012a08414a9baf8a31606f97788af.svg",
     "static/media/leftArrow.svg": "/nxtwave-react-assignment/static/media/leftArrow.431dc1e888046d5a28c967ad67fbba4d.svg",
     "static/media/rightArrow.svg": "/nxtwave-react-assignment/static/media/rightArrow.87d2fb456b7c498fa263fc58e4e6eacc.svg",
-    "main.f452d0bc.css.map": "/nxtwave-react-assignment/static/css/main.f452d0bc.css.map",
-    "main.64f32d2d.js.map": "/nxtwave-react-assignment/static/js/main.64f32d2d.js.map"
+    "main.ce97dffa.css.map": "/nxtwave-react-assignment/static/css/main.ce97dffa.css.map",
+    "main.cf3dc32f.js.map": "/nxtwave-react-assignment/static/js/main.cf3dc32f.js.map"
   },
   "entrypoints": [
-    "static/css/main.f452d0bc.css",
-    "static/js/main.64f32d2d.js"
+    "static/css/main.ce97dffa.css",
+    "static/js/main.cf3dc32f.js"
   ]
 }
