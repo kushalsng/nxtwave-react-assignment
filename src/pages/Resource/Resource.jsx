@@ -82,7 +82,7 @@ const Resource = () => {
       </nav>
       <SearchBox search={search} setSearch={setSearch} />
       <section className="section-container">
-        <div className="item-container" style={{ justifyContent: 'center', alignItems: 'center', flexWrap: 'wrap' }}>
+        <div className="item-container">
           {resourceLoading ? (
             <Loader />
           ) : resourceFetchFailed ? (

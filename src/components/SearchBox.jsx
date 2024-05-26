@@ -5,12 +5,12 @@ const SearchBox = ({ search, setSearch }) => {
   return (
     <div className="search-box">
       <img src={searchIcon} alt="" />
-      <label htmlFor="search" className="sr-only">Search</label>
       <input
         id="search"
-        type="search"
+        type="text"
         placeholder="Search"
         aria-label="Search"
+        autoComplete='off'
         value={search}
         onChange={(e) => setSearch(e.target.value)}
       />
